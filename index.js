@@ -1,13 +1,17 @@
+let status = "on"
+
+while(status === "on") {
+
 function calculateTargetTilt(gyroTilt, controlTilt) {
     return gyroTilt + controlTilt
 }
 
 function readGyroSensorTilt() {
-    return Math.random() * 360 - 180
+    return Math.random() * 360 - 180            
 }
 
 function readControlInputTilt() {
-    return Math.random() * 360 - 180
+    return Math.random() * 360 - 180            
 }
 
 function cycle() {
@@ -19,5 +23,15 @@ function cycle() {
     
     const targetTilt = calculateTargetTilt(gyroTilt, controlTilt)
     console.log("targetTilt: ", targetTilt)
+    if (targetTilt < 0) {
+        console.log("steer down")
+    } else if (targetTilt > 0) {
+        console.log("steer up")
+    } else  {
+        console.log("on target tilt")
+    }
 }
 cycle()
+
+
+}
