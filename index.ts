@@ -1,4 +1,6 @@
-let target = [0, 0, 0]
+type Coordinates = [number, number, number]
+
+let target: Coordinates = [0, 0, 0]
 
 function cycle() {
     
@@ -15,11 +17,11 @@ function cycle() {
     console.log("Steering :", steering);
 }
 
-function getGyro() {
+function getGyro(): Coordinates {
     return [Math.random() * 360, Math.random() * 360, Math.random() * 360]
 }
 
-function getControl() {
+function getControl(): Coordinates {
     return [Math.random() * 360, Math.random() * 360, Math.random() * 360]
 }
 
