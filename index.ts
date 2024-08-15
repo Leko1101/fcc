@@ -15,6 +15,11 @@ function cycle() {
 
     const steering = [target[0] - gyro[0], target[1] - gyro[1], target[2] - gyro[2]]
     console.log("Steering :", steering);
+
+    const output = [steering[0] * 0.125, steering[1] * 0.125, steering[2] * 0.125]
+    console.log("Output: ", output)
+
+    console.log("_____")
 }
 
 function getGyro(): Coordinates {
