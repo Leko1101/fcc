@@ -1,3 +1,5 @@
+//for absolute control values, that means target is identical to control
+
 type Coordinates = [number, number, number]
 
 let target: Coordinates = [0, 0, 0]
